@@ -42,6 +42,12 @@ function App() {
             }
           />
           <Route
+            path="/home"
+            element={
+              <Home tasks={tasks} addTask={addTask} deleteTask={deleteTask} />
+            }
+          />
+          <Route
             path="/archive"
             element={
               <ArchivePage
