@@ -11,7 +11,7 @@ function Header() {
         <ul className="flex gap-6">
           <li>
             <Link
-              to="/todo-app/home"
+              to="/home"
               className="text-white hover:text-blue-300 transition-all duration-300"
             >
               Task list
@@ -19,7 +19,7 @@ function Header() {
           </li>
           <li>
             <Link
-              to="/todo-app/archive"
+              to="/archive"
               className="text-white hover:text-blue-300 transition-all duration-300"
             >
               Archive
