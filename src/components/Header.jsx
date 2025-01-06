@@ -11,7 +11,7 @@ function Header() {
         <ul className="flex gap-6">
           <li>
             <Link
-              to="/"
+              to="/home"
               className="text-white hover:text-blue-300 transition-all duration-300"
             >
               Task list
