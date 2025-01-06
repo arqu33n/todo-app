@@ -29,14 +29,14 @@ function App() {
   }
 
   return (
-    <Router>
+    <Router basename="/todo-app">
       <div>
         {/* Хедер, который будет один раз */}
         <Header />
 
         <Routes>
           <Route
-            path="/home"
+            path="/"
             element={
               <Home tasks={tasks} addTask={addTask} deleteTask={deleteTask} />
             }
