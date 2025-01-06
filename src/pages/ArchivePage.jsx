@@ -1,4 +1,5 @@
-const ArchivePage = ({ archivedTasks, clearArchive }) => {
+const ArchivePage = ({ archivedTasks = [], clearArchive }) => {
+  // Значение по умолчанию
   return (
     <div>
       <div className="p-4">
