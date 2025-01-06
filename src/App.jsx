@@ -36,7 +36,7 @@ function App() {
 
         <Routes>
           <Route
-            path="/"
+            path="/home"
             element={
               <Home tasks={tasks} addTask={addTask} deleteTask={deleteTask} />
             }
