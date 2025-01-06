@@ -4,6 +4,11 @@
 
 A simple task management app built with **Vite**, **React**, and **Tailwind CSS**.
 
+## Demo
+
+Check out the live version of the app:  
+[Live Demo](https://arqu33n.github.io/todo-app)
+
 ## Features
 
 - Add tasks.
