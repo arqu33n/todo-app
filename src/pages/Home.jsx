@@ -1,20 +1,20 @@
 import { useState } from 'react'
 import TodoList from '../components/TodoList'
 // import Header from '../components/Header'
-import { Link } from 'react-router-dom'
 
 const Home = ({ tasks, addTask, deleteTask }) => {
   const [newTask, setNewTask] = useState('')
+  const [isError, setIsError] = useState(false)
 
-  // Функция для добавления задачи
   const handleAddTask = () => {
     if (newTask.trim()) {
-      addTask(newTask) // Добавляем задачу
-      setNewTask('') // Очищаем поле ввода
+      addTask(newTask)
+      setNewTask('')
+    } else {
+      setIsError(true)
+      setTimeout(() => setIsError(false), 2000)
     }
   }
-
-  // Функция для переключения состояния задачи (выполнена/не выполнена)
   const toggleTask = (id) => {
     tasks.map((task) =>
       task.id === id ? { ...task, completed: !task.completed } : task
@@ -36,12 +36,16 @@ const Home = ({ tasks, addTask, deleteTask }) => {
           }}
         />
         <TodoList tasks={tasks} onToggle={toggleTask} onDelete={deleteTask} />
-        <Link
-          to="/archive"
-          className="block mt-4 bg-blue-500 text-white p-2 text-center"
+        <button
+          className={`block mt-4 ${
+            isError
+              ? 'border-2 border-red-500 text-red-500'
+              : 'bg-blue-500 text-white'
+          } p-2 text-center w-full`}
+          onClick={() => handleAddTask()}
         >
-          Go to Archive
-        </Link>
+          {isError ? 'Please enter a task!' : 'Add task'}
+        </button>
       </div>
     </div>
   )
