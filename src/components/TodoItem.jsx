@@ -8,10 +8,10 @@ const TodoItem = ({ task, onToggle, onDelete }) => {
         {task.text}
       </span>
       <button
-        className="bg-red-500 text-white px-2 py-1 ml-2"
+        className="bg-green-500 text-white px-2 py-1 ml-2"
         onClick={() => onDelete(task.id)}
       >
-        Delete
+        Done
       </button>
     </div>
   )

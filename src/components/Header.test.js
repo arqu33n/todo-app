@@ -13,5 +13,5 @@ test('renders ToDo App header and navigation links', () => {
   expect(screen.getByText(/ToDo App/i)).toBeInTheDocument()
 
   expect(screen.getByText(/Task list/i)).toBeInTheDocument()
-  expect(screen.getByText(/Archive/i)).toBeInTheDocument()
+  expect(screen.getByText(/Completed/i)).toBeInTheDocument()
 })

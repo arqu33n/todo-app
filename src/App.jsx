@@ -48,7 +48,7 @@ function App() {
             }
           />
           <Route
-            path="/archive"
+            path="/completed"
             element={
               <ArchivePage
                 archivedTasks={archivedTasks}

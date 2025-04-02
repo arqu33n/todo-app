@@ -17,7 +17,7 @@ test('renders Archive page with tasks', () => {
     </MemoryRouter>
   )
 
-  expect(screen.getByText(/Archived Tasks/i)).toBeInTheDocument()
+  expect(screen.getByText(/Completed Tasks/i)).toBeInTheDocument()
   expect(screen.getByText(/Archived task 1/i)).toBeInTheDocument()
   expect(screen.getByText(/Archived task 2/i)).toBeInTheDocument()
 
@@ -39,7 +39,7 @@ test('renders Archive page with no tasks', () => {
     </MemoryRouter>
   )
 
-  expect(screen.getByText(/No archived tasks/i)).toBeInTheDocument()
+  expect(screen.getByText(/No completed tasks/i)).toBeInTheDocument()
 
   expect(screen.getByText(/Clear Archive/i)).toBeInTheDocument()
 })

@@ -19,10 +19,10 @@ function Header() {
           </li>
           <li>
             <Link
-              to="/archive"
+              to="/completed"
               className="text-white hover:text-blue-300 transition-all duration-300"
             >
-              Archive
+              Completed
             </Link>
           </li>
         </ul>

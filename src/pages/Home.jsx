@@ -25,6 +25,7 @@ const Home = ({ tasks, addTask, deleteTask }) => {
     <div>
       {/* <Header /> */}
       <div className="p-4">
+        <TodoList tasks={tasks} onToggle={toggleTask} onDelete={deleteTask} />
         <input
           type="text"
           placeholder="Add a new task"
@@ -35,7 +36,6 @@ const Home = ({ tasks, addTask, deleteTask }) => {
             if (e.key === 'Enter') handleAddTask()
           }}
         />
-        <TodoList tasks={tasks} onToggle={toggleTask} onDelete={deleteTask} />
         <button
           className={`block mt-4 ${
             isError
