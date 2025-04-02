@@ -38,4 +38,5 @@ Core functionality is covered with **Jest** and **React Testing Library**.
 
    ```bash
    npm run dev
+   npm run start
    ```
